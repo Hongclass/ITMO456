@@ -1,0 +1,96 @@
+ITMO/IT-O 456 Laboratory Week 4 - chapter 6
+
+Exercises from the Textbook: 
+============================
+Launch the Fedora 20 Virtual Machine on your computer.  
+
+Laboratory Exercises: 
+=====================
+All items can be demonstrated with a screen shot and or a short answer
+All questions worth 2 points unless noted.
+Total of 20 points 
+
+submission -  lastname-firstname-week-4.pdf   (PDF format required)
+
+Complete the following laboratory exercises. All steps are numbered but not every step includes a question. You only need to record answers for those steps that include a question; use the number preceding the step as the question number when recording your answer. 
+In these exercises: 
+   * you log in to the computer and create new directories;
+   * you copy files using the cp command;
+   * you use the mv command to rename files and directories;
+   * you delete files and directories using the rmdir and rm commands;
+   * you apply and modify access permissions on files and directories and test their effects.
+   * understand the nature of the root account permissions and using sudo
+ 
+1. After your Linux system has been loaded, launch a terminal window
+   At the command prompt, type ls -F and press Enter. 
+   At the command prompt, type mkdir mysamples and press Enter. Next, type ls -F at the command prompt and press Enter. How many files and subdirectories are there? 
+   At the command prompt, type cd mysamples and press Enter. Next, type ls -F at the command prompt and press Enter. What are the contents of the subdirectory mysamples?
+   At the command prompt, type mkdir undermysamples and press Enter. Next, type ls -F at the command prompt and press Enter. What are the contents of the subdirectory mysamples?
+   At the command prompt, type mkdir todelete and press Enter. Next, type ls -F at the command prompt and press Enter. Does the subdirectory todelete you just created appear listed in the display?
+   Provide screen shot of the results
+	
+2. At the command prompt, type cd .. and press Enter. Next, type ls -R and press Enter. Notice that the subdirectory mysamples and its subdirectory undermysamples are both displayed. You have used the recursive option with the ls command.
+   At the command prompt, type cd .. and press Enter. At the command prompt, type pwd and press Enter. What is your current directory?
+   At the command prompt, type sudo mkdir topsecret and press Enter. At the command prompt, type ls -F and press Enter. Does the subdirectory you just created appear listed in the display?
+   Next, type ls -F at the command prompt and press Enter. Note the contents of your home folder.
+
+3. At the command prompt, type touch sample1 and press Enter to create the file sample1.
+   At the command prompt, type cp sample1 and press Enter. What error message was displayed and why?
+   At the command prompt, type cp sample1 sample1A and press Enter. Next, type ls -F at the command prompt and press Enter. How many files are there, and what are their names? Why?
+   At the command prompt, type cp sample1 mysamples/sample1B and press Enter. Next, type ls -F at the command prompt and press Enter. How many files are there, and what are their names? Why?
+   At the command prompt, type cd mysamples and press Enter. Next, type ls -F at the command prompt and press Enter. Was sample1B copied successfully?
+
+4. At the command prompt, type cp /home/aplusstudent/sample2 . and press Enter. Next, type ls -F at the command prompt and press Enter. How many files are there, and what are their names? Why?
+   At the command prompt, type cp sample1B .. and press Enter. Next, type cd .. at the command prompt and press Enter. At the command prompt, type ls -F and press Enter. Was the sample1B file copied successfully?
+   At the command prompt, type cp sample1 sample2 sample3 mysamples and press Enter. What message do you get and why? Choose y and press Enter. Next, type cd mysamples at the command prompt and press Enter. At the command prompt, type ls -F and press Enter. How many files are there, and what are their names? Why?
+   At the command prompt, type cd .. and press Enter. Next, type cp mysamples mysamples2 at the command prompt and press Enter. What error message did you receive? Why?
+   At the command prompt, type cp -R mysamples mysamples2 and press Enter. Next, type ls -F at the command prompt and press Enter. Was the directory copied successfully? Type ls -F mysamples2 at the command prompt and press Enter. Were the contents of mysamples successfully copied to mysamples2?
+   Type ls -F at the command prompt and press Enter. Note the contents of your home folder.
+   At the command prompt, type mv sample1 and press Enter. What error message was displayed and why?
+   At the command prompt, type mv sample1 sample4 and press Enter. Next, type ls -F at the command prompt and press Enter. How many files are listed, and what are their names? What happened to sample1?
+
+5. At the command prompt, type mv sample4 mysamples and press Enter. Next, type ls -F at the command prompt and press Enter. How many files are there, and what are their names? Where did sample4 go?
+   At the command prompt, type cd mysamples and press Enter. Next, type ls -F at the command prompt and press Enter. Notice that the sample4 file you moved in Step 5 was moved here.
+   At the command prompt, type mv sample4 .. and press Enter. Next, type ls -F at the command prompt and press Enter. How many files are there, and what are their names? Where did the sample4 file go?
+   At the command prompt, type cd .. and press Enter. Next, type ls -F at the command prompt, and press Enter to view the new location of sample4.
+   At the command prompt, type mv sample4 mysamples/sample2 and press Enter. What message appeared on the screen and why?
+   Type y and press Enter to confirm you want to overwrite the file in the destination folder.
+   At the command prompt, type mv sample? mysamples and press Enter. Type y and press Enter to confirm you want to overwrite the file sample3 in the destination folder.
+
+6. At the command prompt, type ls -F and press Enter. How many files are there and why?
+   At the command prompt, type mv sample1* mysamples and press Enter. Type y and press Enter to confirm you want to overwrite the file sample1B in the destination directory.
+   At the command prompt, type ls -F and press Enter. Notice that there are no sample files in the /root directory.
+   At the command prompt, type cd mysamples and press Enter. Next, type ls -F at the command prompt and press Enter. Notice that all files originally in /root have been moved to this directory.
+   At the command prompt, type cd .. and press Enter. Next, type ls -F at the command prompt and press Enter. Type mv mysamples samples and press Enter. Next, type ls -F at the command prompt and press Enter. Why did you not need to specify the recursive option to the mv command to rename the mysamples directory to samples?
+   At the command prompt, type cd samples and press Enter. At the command prompt, type ls -R and press Enter. Note the two empty directories todelete and undermysamples.
+
+7. At the command prompt, type rmdir undermysamples todelete and press Enter. Did the command work? Why? Next, type ls -F at the command prompt and press Enter. Were both directories deleted successfully?
+   At the command prompt, type rm sample1* and press Enter. What message is displayed? Answer n to all three questions.
+   At the command prompt, type rm -f sample1* and press Enter. Why were you not prompted to continue? Next, type ls -F at the command prompt and press Enter. Were all three files deleted successfully?
+   At the command prompt, type cd .. and press Enter. Next, type rmdir samples at the command prompt and press Enter. What error message do you receive and why?
+   At the command prompt, type rm -Rf samples and press Enter. Next, type ls -F at the command prompt and press Enter. Were the samples directory and all the files within it deleted successfully?
+   At the command prompt, type touch permsample and press Enter. Next, type chmod 777 permsample at the command prompt and press Enter.
+   At the command prompt, type ls -l and press Enter. Who has permissions to this file?
+   At the command prompt, type chmod 000 permsample and press Enter. Next, type ls -1 at the command prompt and press Enter. Who has permissions to this file?
+
+8. At the command prompt, type rm -f permsample and press Enter. Were you able to delete this file? Why?
+   At the command prompt, type cd / and press Enter. Next, type pwd at the command prompt and press Enter. What directory are you in? Type ls -F at the command prompt and press Enter. What directories do you see?
+   At the command prompt, type ls -1 and press Enter to view the owner, group owner, and permissions on the topsecret directory created earlier. Who is the owner and group owner? If you were logged in as the user "aplusstudent", in which category would you be placed (user, group, other)? What permissions do you have as this category (read, write, execute)?
+
+9. At the command prompt, type cd /topsecret and press enter to enter the directory. Next, type ls -F at the command prompt and press Enter. Are there any files in this directory? Type cp /etc/hosts . at the command prompt and press Enter. Next, type ls -F at the command prompt and press Enter to ensure that a copy of the hosts file was made in your current directory.
+   At the command prompt, type cd /topsecret and press Enter to enter the topsecret directory. Type cp /etc/hosts . at the command prompt and press Enter to place another copy of the hosts file in your current directory.
+   At the command prompt, type ls -l and press Enter. Who is the owner and group owner of this file? If you were logged in as the user user1, in which category would you be placed (user, group, other)? What permissions do you have as this category (read, write, execute)?
+
+
+10. At the command prompt, type cd /topsecret and press Enter to enter the topsecret directory. Type cat hosts at the command prompt and press Enter. Were you successful? Why? Next, type nano hosts at the command prompt to open the hosts file in the nano editor. Delete the first line of this file by placing the cursor in the line and pressing Ctrl+K, then press Ctrl+O and Enter to save your changes. Were you successful? Why? Exit the editor by pressing Ctrl+X and discard your changes.
+    Switch back to your previous command-line terminal (tty4) by pressing Ctrl+Alt+F4. Note that you are logged in as the root user on this terminal.
+    At the command prompt, type chmod o+w /topsecret/hosts and press Enter.
+    Switch back to your previous command-line terminal (tty3) by pressing Ctrl+Alt+F3. Note that you are logged in as the user1 user on this terminal.
+    At the command prompt, type cd /topsecret and press Enter to enter the topsecret directory. Type nano hosts at the command prompt to open the hosts file in the nano editor. Delete the first line of this file by placing the cursor in the line and pressing Ctrl+K, then press Ctrl+O and Enter to save your changes. Why were you successful this time? Exit the editor by pressing Ctrl+X.
+    At the command prompt, type ls -l and press Enter. Do you have permission to execute the hosts file? Should you make this file executable? Why? Next, type ls -1 /bin at the command prompt and press Enter. Note how many of these files to which you have execute permission. Type file /bin/* at the command prompt and press Enter to view the file types of the files in the /bin directory. Should these files have the execute permission?
+
+
+Exercises are adapted from Eckert, Jason W. Linux+ Guide to Linux Certification, 3rd Edition Cengage Course Technology, ISBN: 9781418837211
+
+
+

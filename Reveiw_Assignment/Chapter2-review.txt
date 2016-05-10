@@ -1,0 +1,20 @@
+Answer each question below - these are from the end of chapter and all answers can be found in the text book.
+Save you answers as a PDF file named - lastname-firstname-reveiew-chapter-2.pdf
+
+
+1. Briefly, what does the process of installing an operating system such as Linux involve?
+2. What is an installer? What is the name of the Fedora/RHEL installer?
+3. Would you set up a GUI on a server system? Why or why not?
+4. A system boots from the hard disk. To install Linux, you need it to boot from a DVD. How can you make the system boot from a DVD?
+5. What is free space on a hard disk? What is a filesystem?
+6. What is an ISO image? How do you burn an ISO image to a DVD?
+
+### Advanced Exercises
+7. Give two reasons why RAID cannot replace backups.
+8. What are RAM disks? How are they used during installation?
+9. What is SHA2? How does it work to ensure that an ISO image file you download is correct?
+10.  If the SHA256 checksums of an ISO don't match what could some reasons why?
+
+
+
+

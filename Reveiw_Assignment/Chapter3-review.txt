@@ -1,0 +1,15 @@
+Answer each question below - these are from the end of chapter and all answers can be found in the text book.
+Save you answers as a PDF file named - lastname-firstname-reveiew-chapter-3.pdf
+
+
+1. What is a live system? What advantages does it have over an installed system?
+2. Describe the Anaconda installer.
+3. Where can the installation image used by Anaconda be located?
+4. Why is it important to test the installation medium? How can you do so?
+5. What should you do if the graphical installer does not work?
+6. When might you specify an **ext2** filesystem instead of **ext4**?
+
+7.  Which utilities can you use to partition a hard disk prior to installation?
+8.  What do you need to do before you can install Fedora as the second operating system on a Windows machine (to create a dual-boot system)?
+9.  How does Anaconda set up a hard disk by default?
+10. How would you turn off DMA (direct memory access) for all disk controllers when you install a new system?

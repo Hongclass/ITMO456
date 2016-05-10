@@ -1,0 +1,7 @@
+$ sudo fdisk -l
+$ lsblk
+$ sudo mkfs -t ext4 /dev/sdb
+$ sudo mkdir /mnt/disk1
+$ sudo mount -t ext4 /dev/sdb /mnt/disk1
+$ sudo vi /etc/fstab
+$ df -h
